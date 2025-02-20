@@ -1,0 +1,23 @@
+[project]
+name = "quantum_distance_bounding"
+version = "0.1.0"
+description = "This repository provides simulations and analyses of various quantum distance bounding (QDB) protocols, along with potential attack scenarios."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy",
+    "qiskit",
+    "qiskit_aer",
+    "matplotlib",
+    "pandas",
+    "seaborn",
+    "ipykernel",
+    "pylatexenc",
+    "strawberryfields",
+    "ruff",
+    "black",
+    "black[jupyter]",
+]
+
+[project.optional-dependencies]
+dev = []

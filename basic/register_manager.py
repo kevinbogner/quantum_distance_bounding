@@ -9,7 +9,6 @@ provided. Once created, the registers are immutable and can be retrieved
 using their names.
 """
 
-
 from qiskit import QuantumRegister
 import numpy as np
 

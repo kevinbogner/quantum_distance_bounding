@@ -149,17 +149,17 @@ def execute_and_extract_results(bell_circuit, shots=1):
     # Execute the circuit on a quantum simulator
     backend = Aer.get_backend("qasm_simulator")
     transpiled_circuit = transpile(bell_circuit, backend=backend)
-    
+
     aer_sim = Aer.get_backend("aer_simulator")
     job = aer_sim.run(transpiled_circuit, shots=shots)
     result = job.result()
     counts = result.get_counts()
-    
+
     m_bits = []
     m_prime_bits = []
     for key in counts.keys():
         m_result, m_prime_result = key.split(" ")
         m_bits.extend([int(bit) for bit in m_result])
         m_prime_bits.extend([int(bit) for bit in m_prime_result])
-    
+
     return m_bits, m_prime_bits
